@@ -1,0 +1,37 @@
+[
+  {
+    "id": "nasa-jwst-overview",
+    "title": "NASA Webb Space Telescope Overview",
+    "url": "https://science.nasa.gov/mission/webb/",
+    "source": "NASA",
+    "content": "The James Webb Space Telescope is NASA's large infrared space observatory launched in December 2021. Webb observes distant galaxies, star formation regions, and exoplanet atmospheres with high sensitivity in infrared wavelengths. It operates near the Sun-Earth L2 point and uses a multi-layer sunshield to stay cold for infrared science."
+  },
+  {
+    "id": "nasa-black-holes",
+    "title": "NASA Black Holes Basics",
+    "url": "https://science.nasa.gov/universe/black-holes/",
+    "source": "NASA",
+    "content": "A black hole is a region where gravity is so strong that not even light can escape from inside the event horizon. Stellar-mass black holes form from the collapse of massive stars. Supermassive black holes sit at the centers of most large galaxies, including the Milky Way."
+  },
+  {
+    "id": "esa-mars-exploration",
+    "title": "ESA Mars Exploration",
+    "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/Mars_exploration",
+    "source": "ESA",
+    "content": "Mars exploration combines orbital missions and surface rovers to study climate history, geology, and potential past habitability. Important goals include understanding water history, atmospheric loss, and preparing for future human missions."
+  },
+  {
+    "id": "nasa-planetary-rings",
+    "title": "NASA Planetary Rings and Saturn",
+    "url": "https://solarsystem.nasa.gov/planets/saturn/overview/",
+    "source": "NASA",
+    "content": "Saturn's rings are made mostly of water ice particles with some rocky material and dust. Ring particles vary from tiny grains to large boulders. Scientists study ring structure to understand gravitational interactions with Saturn's moons and the age and evolution of ring systems."
+  },
+  {
+    "id": "nasa-big-bang",
+    "title": "NASA Universe and Big Bang Basics",
+    "url": "https://science.nasa.gov/universe/",
+    "source": "NASA",
+    "content": "The Big Bang model describes the early hot, dense state of the universe and its expansion over billions of years. Evidence includes cosmic microwave background radiation, the abundance of light elements, and the observed expansion of galaxies."
+  }
+]
