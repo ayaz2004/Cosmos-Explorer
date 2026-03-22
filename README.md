@@ -25,22 +25,29 @@ I chose this specific domain because it provided a perfect use case for a specia
 ## Running Locally
 
 1. Install dependencies at the root level:
-\\\ash
+```bash
 npm install
-\\\`n
-2. Create a \.env\ file in the root directory based on the following variables:
-\\\	ext
+```
+
+2. Create a `.env` file in the root directory based on the following variables:
+```text
 GROQ_API_KEY=your_groq_api_key
 QDRANT_ENABLED=true
 QDRANT_URL=your_qdrant_cluster_url
 QDRANT_API_KEY=your_qdrant_api_key
 ALLOW_VERCEL_PREVIEW_ORIGINS=true
-\\\`n
-3. Start the development servers:
-\\\ash
-# Terminal 1 - Start the Express backend on port 3001
-npm run dev:backend
+```
 
-# Terminal 2 - Start the Vite React frontend
+3. Start the development servers (in separate terminals):
+
+**Terminal 1:**
+```powershell
+# Go into the root directory and start the Express backend
+npm run dev:backend
+```
+
+**Terminal 2:**
+```powershell
+# Go into the root directory and start the Vite React frontend
 npm run dev:frontend
-\\\`n
+```
