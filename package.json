@@ -1,0 +1,29 @@
+{
+  "name": "thinklabs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayaz2004/Cosmos-Explorer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ayaz2004/Cosmos-Explorer/issues"
+  },
+  "homepage": "https://github.com/ayaz2004/Cosmos-Explorer#readme",
+  "dependencies": {
+    "@ai-sdk/groq": "^3.0.31",
+    "@qdrant/js-client-rest": "^1.17.0",
+    "ai": "^6.0.134",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  }
+}
