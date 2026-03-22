@@ -14,7 +14,10 @@ function asNumber(value, fallback) {
 
 export const env = {
   port: process.env.PORT || 3001,
-  frontendUrl: process.env.FRONTEND_URL || 'http://localhost:5173',
+  frontendUrl: process.env.FRONTEND_URL || '',
+  vercelUrl: process.env.VERCEL_URL || '',
+  isVercel: process.env.VERCEL === '1',
+  allowVercelPreviewOrigins: asBoolean(process.env.ALLOW_VERCEL_PREVIEW_ORIGINS, true),
   groqApiKey: process.env.GROQ_API_KEY,
   qdrant: {
     enabled: asBoolean(process.env.QDRANT_ENABLED, false),

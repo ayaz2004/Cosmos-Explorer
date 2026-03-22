@@ -15,6 +15,33 @@ const groq = createGroq({
 const app = express();
 let knowledgeInitPromise;
 
+const localDevOrigins = new Set([
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+]);
+
+function isAllowedOrigin(origin) {
+  if (!origin) return true;
+
+  if (localDevOrigins.has(origin)) {
+    return true;
+  }
+
+  if (env.frontendUrl && origin === env.frontendUrl) {
+    return true;
+  }
+
+  if (env.vercelUrl && origin === `https://${env.vercelUrl}`) {
+    return true;
+  }
+
+  if (env.allowVercelPreviewOrigins && /^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(origin)) {
+    return true;
+  }
+
+  return false;
+}
+
 function initializeKnowledge() {
   if (!knowledgeInitPromise) {
     knowledgeInitPromise = initializeKnowledgeStore()
@@ -37,7 +64,14 @@ function initializeKnowledge() {
 }
 
 app.use(cors({
-  origin: env.frontendUrl,
+  origin: (origin, callback) => {
+    if (isAllowedOrigin(origin)) {
+      callback(null, true);
+      return;
+    }
+
+    callback(new Error(`CORS blocked for origin: ${origin}`));
+  },
   methods: ['POST', 'GET'],
   credentials: true,
 }));
