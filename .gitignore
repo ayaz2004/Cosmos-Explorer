@@ -1,6 +1,9 @@
 # Global ignores
 node_modules/
 .vercel/
+.env
+.env.*
+!.env.example
 
 # Frontend
 frontend/node_modules/
