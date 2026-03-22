@@ -1,6 +1,9 @@
-import documents from './knowledge/documents.json' with { type: 'json' };
+import fs from 'node:fs';
 import { QdrantClient } from '@qdrant/js-client-rest';
 import { env } from './config.js';
+
+const documentsPath = new URL('./knowledge/documents.json', import.meta.url);
+const documents = JSON.parse(fs.readFileSync(documentsPath, 'utf-8'));
 
 const VECTOR_SIZE = env.qdrant.vectorSize;
 const COLLECTION_NAME = env.qdrant.collection;
